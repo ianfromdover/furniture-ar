@@ -1,0 +1,41 @@
+###
+# Unity folders and files
+###
+/lab3/[Aa]ssets/AssetStoreTools*
+/lab3/[Bb]uild/
+/lab3/[Ll]ibrary/
+/lab3/[Ll]ocal[Cc]ache/
+/lab3/[Oo]bj/
+/lab3/[Tt]emp/
+/lab3/[Uu]nityGenerated/
+# file on crash reports
+/lab3/sysinfo.txt
+# Unity3D generated meta files
+/lab3/*.pidb.meta
+
+###
+# VS/MD solution and project files
+###
+/lab3/[Ee]xportedObj/
+/lab3/*.booproj
+/lab3/*.csproj
+/lab3/*.sln
+/lab3/*.suo
+/lab3/*.svd
+/lab3/*.unityproj
+/lab3/*.user
+/lab3/*.userprefs
+/lab3/*.pidb
+/lab3/.DS_Store
+
+###
+# OS generated
+###
+/lab3/.DS_Store
+/lab3/.DS_Store?
+/lab3/._*
+/lab3/.Spotlight-V100
+/lab3/.Trashes
+/lab3/Icon?
+/lab3/ehthumbs.db
+/lab3/Thumbs.db
