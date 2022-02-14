@@ -27,13 +27,10 @@ public class ARTapToPlaceObject : MonoBehaviour
         UpdatePlacementPose();
         UpdatePlacementIndicator();
 
-        // next section. need to set placement indicator to be scale 1
-        /*
         if (placementPostIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             PlaceObject();
         }
-        */
     }
 
     // turn the indicator on or off
@@ -66,11 +63,8 @@ public class ARTapToPlaceObject : MonoBehaviour
     }
 
     // Next section
-    /*
     private void PlaceObject()
     {
         Instantiate(objectToPlace, PlacementPose.position, PlacementPose.rotation);
     }
-    */
 }
-
