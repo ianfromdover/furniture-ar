@@ -2064,7 +2064,7 @@ Transform:
   m_GameObject: {fileID: 1114040580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1577749888}
   m_Father: {fileID: 0}
@@ -2104,12 +2104,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114040580}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedLibrary: {fileID: 0}
+  m_SerializedLibrary: {fileID: 11400000, guid: 9567b9ed7361b764abdbe9434053dc02, type: 2}
   m_MaxNumberOfMovingImages: 1
   m_TrackedImagePrefab: {fileID: 929980141604690619, guid: 7a63ae6fe5b2f1c44a419287242c9cc6, type: 3}
 --- !u!1 &1121777606
@@ -3184,7 +3184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1390977044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3198,7 +3198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placementIndicator: {fileID: 1604565176}
-  objectToPlace: {fileID: 929980141604690619, guid: 7a63ae6fe5b2f1c44a419287242c9cc6, type: 3}
+  objectToPlace: {fileID: 1012880706202088025, guid: cfd6dd645f49bfe468810e9bb00fa518, type: 3}
 --- !u!4 &1390977045
 Transform:
   m_ObjectHideFlags: 0
@@ -3839,7 +3839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1604565177
 Transform:
   m_ObjectHideFlags: 0
@@ -3849,7 +3849,7 @@ Transform:
   m_GameObject: {fileID: 1604565176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 757850671}
   m_Father: {fileID: 0}
