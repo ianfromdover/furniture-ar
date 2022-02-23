@@ -27,7 +27,6 @@ public class ARTapToPlaceObject : MonoBehaviour
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdatePlacementPose();
@@ -35,7 +34,6 @@ public class ARTapToPlaceObject : MonoBehaviour
 
     }
 
-    // turn the indicator on or off
     private void UpdatePlacementIndicator()
     {
         if (placementPoseIsValid) // works
@@ -82,6 +80,7 @@ public class ARTapToPlaceObject : MonoBehaviour
         objectToPlace = o;
         Destroy(ghost);
         ghost = Instantiate(o, PlacementPose.position, PlacementPose.rotation);
+        ghost.GetComponent<Recolour>().SetValid();
         ghost.transform.parent = placementIndicator.transform;
     }
     
