@@ -19,7 +19,7 @@ public class Recolour : MonoBehaviour
         }
         else
         {
-            foreach(Transform child in transform)
+            foreach(Transform child in transform.GetChild(0).transform)
             {
                 Debug.Log(child.gameObject.name);
                 children.Add(child.gameObject);

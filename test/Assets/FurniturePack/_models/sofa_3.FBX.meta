@@ -1,56 +1,143 @@
 fileFormatVersion: 2
 guid: dd1e49b0a3e0dd449a7cb028f0aae903
-timeCreated: 18446744011573954816
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: base
-    100002: Box055
-    100004: Box056
-    100006: left
-    100008: legs
-    100010: right
-    100012: seat
-    100014: seat 1
-    100016: //RootNode
-    400000: base
-    400002: Box055
-    400004: Box056
-    400006: left
-    400008: legs
-    400010: right
-    400012: seat
-    400014: seat 1
-    400016: //RootNode
-    2300000: base
-    2300002: Box055
-    2300004: Box056
-    2300006: left
-    2300008: legs
-    2300010: right
-    2300012: seat
-    2300014: seat 1
-    3300000: base
-    3300002: Box055
-    3300004: Box056
-    3300006: left
-    3300008: legs
-    3300010: right
-    3300012: seat
-    3300014: seat 1
-    4300000: left
-    4300002: base
-    4300004: legs
-    4300006: Box055
-    4300008: Box056
-    4300010: right
-    4300012: seat
-    4300014: seat
-    9500000: //RootNode
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: base
+  - first:
+      1: 100002
+    second: Box055
+  - first:
+      1: 100004
+    second: Box056
+  - first:
+      1: 100006
+    second: left
+  - first:
+      1: 100008
+    second: legs
+  - first:
+      1: 100010
+    second: right
+  - first:
+      1: 100012
+    second: seat
+  - first:
+      1: 100014
+    second: seat 1
+  - first:
+      1: 100016
+    second: //RootNode
+  - first:
+      4: 400000
+    second: base
+  - first:
+      4: 400002
+    second: Box055
+  - first:
+      4: 400004
+    second: Box056
+  - first:
+      4: 400006
+    second: left
+  - first:
+      4: 400008
+    second: legs
+  - first:
+      4: 400010
+    second: right
+  - first:
+      4: 400012
+    second: seat
+  - first:
+      4: 400014
+    second: seat 1
+  - first:
+      4: 400016
+    second: //RootNode
+  - first:
+      23: 2300000
+    second: base
+  - first:
+      23: 2300002
+    second: Box055
+  - first:
+      23: 2300004
+    second: Box056
+  - first:
+      23: 2300006
+    second: left
+  - first:
+      23: 2300008
+    second: legs
+  - first:
+      23: 2300010
+    second: right
+  - first:
+      23: 2300012
+    second: seat
+  - first:
+      23: 2300014
+    second: seat 1
+  - first:
+      33: 3300000
+    second: base
+  - first:
+      33: 3300002
+    second: Box055
+  - first:
+      33: 3300004
+    second: Box056
+  - first:
+      33: 3300006
+    second: left
+  - first:
+      33: 3300008
+    second: legs
+  - first:
+      33: 3300010
+    second: right
+  - first:
+      33: 3300012
+    second: seat
+  - first:
+      33: 3300014
+    second: seat 1
+  - first:
+      43: 4300000
+    second: left
+  - first:
+      43: 4300002
+    second: base
+  - first:
+      43: 4300004
+    second: legs
+  - first:
+      43: 4300006
+    second: Box055
+  - first:
+      43: 4300008
+    second: Box056
+  - first:
+      43: 4300010
+    second: right
+  - first:
+      43: 4300012
+    second: seat
+  - first:
+      43: 4300014
+    second: seat
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 2
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -63,6 +150,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -77,19 +166,31 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
   tangentSpace:
@@ -97,10 +198,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -110,14 +214,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 1
   userData: 
   assetBundleName: 

@@ -7,18 +7,24 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARTapToPlaceObject : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject placementIndicator;
+    public GameObject ghost;
     public GameObject objectToPlace;
+    
+    // furniture
+    public GameObject chair;
+    public GameObject table;
+    public GameObject pouf;
+    public GameObject shelf;
+    public GameObject sofa;
 
     private Pose PlacementPose; // contains a Vector3 for a position and a quaternion for rotation
     private ARRaycastManager aRRaycastManager;
-    private bool placementPostIsValid = false;
+    private bool placementPoseIsValid = false;
 
     void Start()
     {
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
-        
     }
 
     // Update is called once per frame
@@ -27,16 +33,19 @@ public class ARTapToPlaceObject : MonoBehaviour
         UpdatePlacementPose();
         UpdatePlacementIndicator();
 
-        if (placementPostIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        // if touched screen
+        /*
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             PlaceObject();
         }
+        */
     }
 
     // turn the indicator on or off
     private void UpdatePlacementIndicator()
     {
-        if (placementPostIsValid) // works
+        if (placementPoseIsValid) // works
         {
             placementIndicator.SetActive(true);
             placementIndicator.transform.SetPositionAndRotation(PlacementPose.position, PlacementPose.rotation);
@@ -55,16 +64,55 @@ public class ARTapToPlaceObject : MonoBehaviour
         var hits = new List<ARRaycastHit>();
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
 
-        placementPostIsValid = hits.Count > 0;
-        if (placementPostIsValid)
+        placementPoseIsValid = hits.Count > 0;
+        if (placementPoseIsValid)
         {
             PlacementPose = hits[0].pose;
         }
     }
 
     // Next section
-    private void PlaceObject()
+    public void PlaceObject()
     {
-        Instantiate(objectToPlace, PlacementPose.position, PlacementPose.rotation);
+        if (placementPoseIsValid)
+        {
+            ghost.GetComponent<Recolour>().isPlaced = true;
+            ghost.transform.parent = null;
+            ghost = Instantiate(objectToPlace, PlacementPose.position, PlacementPose.rotation);
+            ghost.transform.parent = placementIndicator.transform;
+        }
+    }
+    
+    private void UseObject(GameObject o)
+    {
+        objectToPlace = o;
+        Destroy(ghost);
+        ghost = Instantiate(o, PlacementPose.position, PlacementPose.rotation);
+        ghost.transform.parent = placementIndicator.transform;
+    }
+    
+    public void UseChair()
+    {
+        UseObject(chair);
+    }
+    
+    public void UseTable()
+    {
+        UseObject(table);
+    }
+    
+    public void UsePouf()
+    {
+        UseObject(pouf);
+    }
+    
+    public void UseShelf()
+    {
+        UseObject(shelf);
+    }
+    
+    public void UseSofa()
+    {
+        UseObject(sofa);
     }
 }
