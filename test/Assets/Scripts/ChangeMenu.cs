@@ -10,11 +10,16 @@ public class ChangeMenu : MonoBehaviour
     public GameObject moveControls;
     public GameObject rotateControls;
     public GameObject currentlyDisplayed;
+    public GameObject deleteControls;
+    public GameObject ghost;
+    public GameObject placementIndicator;
     public bool isSectionDisplayedToggle = true;
     void Start()
     {
+        /*
         catalogueControls.SetActive(true);
         currentlyDisplayed = catalogueControls;
+        */
     }
     
     public void SetCatalogue()
@@ -31,8 +36,19 @@ public class ChangeMenu : MonoBehaviour
         ToggleMenu(rotateControls);
     }
     
+    public void SetDelete()
+    {
+        ToggleMenu(deleteControls);
+    }
+    
     private void ToggleMenu(GameObject menu)
     {
+        if (currentlyDisplayed == catalogueControls)
+        {
+            Destroy(ghost);
+            placementIndicator.SetActive(false);
+        }
+        
         if (currentlyDisplayed != menu)
         {
             currentlyDisplayed.SetActive(false);

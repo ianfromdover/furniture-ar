@@ -1,14 +1,19 @@
 # Interaction Design for AR
+Done by Hong Yi En, Ian
+A0217685U
 
 Furniture Placement App for Android
 Referred to https://varlabs.comp.nus.edu.sg/unitylab/learn/core_3_new.html/
 
+## Unity Version
+Unity 2020.2.1f1
+
 ## Packages Used
-- Device Simulator 3.0.3-preview
 - 2D Sprite 1.0.0
 - AR Foundation 4.0.10
 - ARCore XR Plugin 4.0.10
 - ARKit XR Plugin 4.0.10
+- Device Simulator 3.0.3-preview
 - JetBrains Rider Editor 2.0.7
 - Test Framework 1.1.19
 - TextMeshPro 3.0.1

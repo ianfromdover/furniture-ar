@@ -46,8 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valid: {fileID: 2100000, guid: 96039578fe9f4b84d9ab9fdeccf7168f, type: 2}
   invalid: {fileID: 2100000, guid: d7ede13be0f51eb4797baec6e3434f07, type: 2}
+  selected: {fileID: 2100000, guid: 24d903548b69fb749b16493497b85086, type: 2}
   validPlacement: 1
   isPlaced: 0
+  isSelected: 0
 --- !u!1 &2360252104549124557
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +91,7 @@ GameObject:
   - component: {fileID: 6994290395574800122}
   - component: {fileID: 2908336446019860157}
   - component: {fileID: 6057770856706706521}
+  - component: {fileID: 5404216646131196940}
   m_Layer: 0
   m_Name: rack_3
   m_TagString: Untagged
@@ -161,6 +164,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5404216646131196940
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3280359838544096830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 27df19f247bebd344813479f564c4ef6, type: 3}
 --- !u!1 &8267946133399285714
 GameObject:
   m_ObjectHideFlags: 0

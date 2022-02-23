@@ -7,9 +7,8 @@ public class Recolour : MonoBehaviour
 {
     public Material valid;
     public Material invalid;
+    public Material selected;
     private List<Material> originalMaterials = new List<Material>();
-    public bool validPlacement;
-    public bool isPlaced = false;
     private List<GameObject> children = new List<GameObject>();
     void Start()
     {
@@ -27,10 +26,17 @@ public class Recolour : MonoBehaviour
             }
         }
     }
-    void Update()
+    public void SetValid()
     {
-        bool isMaterialSet = validPlacement ? SetMaterial(valid) : SetMaterial(invalid);
-        bool hasBeenPlaced = isPlaced ? SetOriginalMaterial() : false;
+        SetMaterial(valid);
+    }
+    public void SetInvalid()
+    {
+        SetMaterial(invalid);
+    }
+    public void SetSelected()
+    {
+        SetMaterial(selected);
     }
     
     private bool SetMaterial(Material m)
@@ -48,7 +54,7 @@ public class Recolour : MonoBehaviour
         }
         return true;
     }
-    private bool SetOriginalMaterial()
+    public bool SetOriginalMaterial()
     {
         if (gameObject.GetComponent<MeshRenderer>() != null) // has no children
         {

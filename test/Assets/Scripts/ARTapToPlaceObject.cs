@@ -33,13 +33,6 @@ public class ARTapToPlaceObject : MonoBehaviour
         UpdatePlacementPose();
         UpdatePlacementIndicator();
 
-        // if touched screen
-        /*
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            PlaceObject();
-        }
-        */
     }
 
     // turn the indicator on or off
@@ -76,9 +69,10 @@ public class ARTapToPlaceObject : MonoBehaviour
     {
         if (placementPoseIsValid)
         {
-            ghost.GetComponent<Recolour>().isPlaced = true;
+            ghost.GetComponent<Recolour>().SetOriginalMaterial();
             ghost.transform.parent = null;
             ghost = Instantiate(objectToPlace, PlacementPose.position, PlacementPose.rotation);
+            ghost.GetComponent<Recolour>().SetValid();
             ghost.transform.parent = placementIndicator.transform;
         }
     }
